@@ -13,17 +13,15 @@ I compile my Typescript into a relative `lib` folder, which is excluded in this 
 
 ### Local Dependency Typings
 
-Local dependency typings are present, yet not currently accessible in-editor due to issues with Lerna resolving 
-`workspace:` dependency resolutions in workspace `package.json` files.
+Local dependency typings are made available through Typescript references in the root `tsconfig.json` file.
+Package names in the respective `package.json` need to match the folder name it's contained in. \
+\
+Ex. The package name is @tsc-monorepo/pkg01, then the name of the folder for it will be pkg01.
 
-See [feat: Support the \`workspace:` protocol #2450](https://github.com/lerna/lerna/pull/2450).
+### Other Notes
 
-Once Lerna supports `file:` resolutions, running `lerna link` will make typings accessible in-editor. 
-
-Resolutions and use of dependencies in other packages will still work.
-
-In addition, running Lerna commands with linked packages will throw the same error complaining about the 
-`workspace:` resolution. Until then, yarn workspace tools is available to run `yarn workspaces foreach`.
+Lerna link issues when resolving `workspace: ` defined dependencies: \
+[feat: Support the \`workspace:` protocol #2450](https://github.com/lerna/lerna/pull/2450).
 
 ### License
 

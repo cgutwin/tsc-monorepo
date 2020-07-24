@@ -7,5 +7,10 @@
     "declarationDir": "./lib/typings",
     "rootDir": "./src",
     "outDir": "./lib"
-  }
+  },
+  "references": [
+    {
+      "path": "../pkg01"
+    }
+  ]
 }

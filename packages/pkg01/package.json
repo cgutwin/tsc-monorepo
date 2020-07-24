@@ -5,7 +5,7 @@
   },
   "license": "MIT",
   "main": "./lib/index.js",
-  "name": "@tsc-monorepo/pkg-01",
+  "name": "@tsc-monorepo/pkg01",
   "private": true,
   "scripts": {
     "typescript": "tsc"

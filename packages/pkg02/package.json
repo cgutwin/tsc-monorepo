@@ -1,11 +1,11 @@
 {
   "author": "Chris Gutwin <24538491+cgutwin@users.noreply.github.com> (https://cgutwin.ca/)",
   "dependencies": {
-    "@tsc-monorepo/pkg-01": "workspace:packages/pkg01"
+    "@tsc-monorepo/pkg01": "workspace:packages/pkg01"
   },
   "license": "MIT",
   "main": "./lib/index.js",
-  "name": "@tsc-monorepo/pkg-02",
+  "name": "@tsc-monorepo/pkg02",
   "private": true,
   "scripts": {
     "typescript": "tsc"

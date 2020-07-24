@@ -23,19 +23,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
-        "name": "@tsc-monorepo/pkg-01",
+        "name": "@tsc-monorepo/pkg01",
         "reference": "workspace:packages/pkg01"
       },
       {
-        "name": "@tsc-monorepo/pkg-02",
+        "name": "@tsc-monorepo/pkg02",
         "reference": "workspace:packages/pkg02"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["@tsc-monorepo/pkg-01", ["workspace:packages/pkg01"]],
-      ["@tsc-monorepo/pkg-02", ["workspace:packages/pkg02"]],
+      ["@tsc-monorepo/pkg01", ["workspace:packages/pkg01"]],
+      ["@tsc-monorepo/pkg02", ["workspace:packages/pkg02"]],
       ["tsc-monorepo", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -1210,22 +1210,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@tsc-monorepo/pkg-01", [
+      ["@tsc-monorepo/pkg01", [
         ["workspace:packages/pkg01", {
           "packageLocation": "./packages/pkg01/",
           "packageDependencies": [
-            ["@tsc-monorepo/pkg-01", "workspace:packages/pkg01"],
+            ["@tsc-monorepo/pkg01", "workspace:packages/pkg01"],
             ["@types/node", "npm:14.0.25"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@tsc-monorepo/pkg-02", [
+      ["@tsc-monorepo/pkg02", [
         ["workspace:packages/pkg02", {
           "packageLocation": "./packages/pkg02/",
           "packageDependencies": [
-            ["@tsc-monorepo/pkg-02", "workspace:packages/pkg02"],
-            ["@tsc-monorepo/pkg-01", "workspace:packages/pkg01"]
+            ["@tsc-monorepo/pkg02", "workspace:packages/pkg02"],
+            ["@tsc-monorepo/pkg01", "workspace:packages/pkg01"]
           ],
           "linkType": "SOFT",
         }]

@@ -1,14 +1,33 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "es5",
-    "module": "commonjs",
-    "sourceMap": true,
+    // 1. This is the line that helps ts module resolution without converting the dependencies.
+    "baseUrl": "./packages",
     "composite": true,
     "downlevelIteration": true,
-    "strict": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "module": "commonjs",
+    "paths": {
+      /*
+      2. Resolves all packages in ./packages that have the prefix @tsc-monorepo.
+      The folder names for the packages need to match the name of the package itself in the package.json file.
+      */
+      "@tsc-monorepo/*": [
+        "*/"
+      ]
+    },
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5"
+  },
+  "references": [
+    {
+      "path": "./packages/pkg01"
+    },
+    {
+      "path": "./packages/pkg02"
+    }
+  ]
 }

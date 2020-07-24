@@ -1067,19 +1067,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsc-monorepo/pkg-01@workspace:packages/pkg01":
+"@tsc-monorepo/pkg01@workspace:packages/pkg01":
   version: 0.0.0-use.local
-  resolution: "@tsc-monorepo/pkg-01@workspace:packages/pkg01"
+  resolution: "@tsc-monorepo/pkg01@workspace:packages/pkg01"
   dependencies:
     "@types/node": ^14.0.25
   languageName: unknown
   linkType: soft
 
-"@tsc-monorepo/pkg-02@workspace:packages/pkg02":
+"@tsc-monorepo/pkg02@workspace:packages/pkg02":
   version: 0.0.0-use.local
-  resolution: "@tsc-monorepo/pkg-02@workspace:packages/pkg02"
+  resolution: "@tsc-monorepo/pkg02@workspace:packages/pkg02"
   dependencies:
-    "@tsc-monorepo/pkg-01": "workspace:packages/pkg01"
+    "@tsc-monorepo/pkg01": "workspace:packages/pkg01"
   languageName: unknown
   linkType: soft
 

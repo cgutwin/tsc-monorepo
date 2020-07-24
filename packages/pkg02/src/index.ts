@@ -1,4 +1,4 @@
-import { getPlatform } from "@tsc-monorepo/pkg-01"
+import { getPlatform } from "@tsc-monorepo/pkg01"
 
 const platform: string = getPlatform()
 
