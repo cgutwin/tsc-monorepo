@@ -1,0 +1,20 @@
+{
+  "author": "Chris Gutwin <24538491+cgutwin@users.noreply.github.com> (https://cgutwin.ca/)",
+  "devDependencies": {
+    "@types/node": "^14.0.25",
+    "lerna": "^3.22.1",
+    "typescript": "^3.9.7"
+  },
+  "license": "MIT",
+  "name": "tsc-monorepo",
+  "private": true,
+  "scripts": {
+    "new-package": "mkdir -p ./packages/$0 && cd ./packages/$0 && yarn init -y",
+    "pkg01": "yarn workspace @tsc-monorepo/pkg-01",
+    "pkg02": "yarn workspace @tsc-monorepo/pkg-02",
+    "typescript": "yarn workspaces foreach run typescript"
+  },
+  "workspaces": [
+    "./packages/*"
+  ]
+}
